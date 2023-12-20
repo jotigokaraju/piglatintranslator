@@ -17,7 +17,7 @@ start_word = st.text_input("Text to Translate", placeholder="Type the Text...")
 st.write("You Entered:", start_word)
 
 #Adjust Start_Word to Append Words into List one at a time
-start_temp = str(start_temp).split()
+start_word = str(start_word).split()
 
 
 def punctuation_check(word, punctuation, character_num, vowel_start):
@@ -80,6 +80,6 @@ def translate(phrase, numbers, letters, capitol_letters, punctuation):
 
 #Run The Program on Button Click
 if st.button("Convert!", type="primary"):
-    phrase = start_temp
+    phrase = start_word
     st.write(translate(phrase, numbers, letters, capitol_letters, punctuation))
     
