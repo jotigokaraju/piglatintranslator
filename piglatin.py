@@ -66,7 +66,7 @@ def translate(phrase, numbers, letters, capitol_letters, punctuation):
     for word in phrase:
         character_num = -1
         
-        if all(character not in letters or character not in capitol_letters for character in word):
+        if all(character not in letters for character in word) or all(character not in capitol_letters for character in word):
             translated_word += word + " "
         else:
             for character in word:
