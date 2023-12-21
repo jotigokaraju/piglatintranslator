@@ -77,10 +77,10 @@ def translate(phrase, numbers, letters, capitol_letters, punctuation):
 
                     if character_num == 0:
                         translated_word += punctuation_check(word, punctuation, character_num, True)
+                        #Capitol Check is unneeded here because if the vowel is the first word, the word is the same so capitals are preserved regardless. 
                     else:
                         translated_word += punctuation_check(word, punctuation, character_num, False)
-                    
-                    translated_word = capitol_check(translated_word, character, capitol_letters, word)
+                        translated_word = capitol_check(translated_word, character, capitol_letters, word)
                     
                     break
     
