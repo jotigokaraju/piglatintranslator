@@ -32,7 +32,6 @@ start_word = str(start_word).split()
 def punctuation_check(word, punctuation, character_num, vowel_start):
     ''' Checks if Punctuation Exists and Keeps Punctation after translated_word '''
     last_word = len(word)-1
-    word = word.lower()
     if vowel_start == True:
         if any(character in punctuation for character in word):
             return word[:last_word] + "yay" + word[last_word] + " "
